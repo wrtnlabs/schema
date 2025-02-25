@@ -20,9 +20,9 @@
   "keywords": [
     "swagger",
     "openapi",
-    "llm-function-call",
-    "openai",
-    "wrtn"
+    "json-schema",
+    "llm-function-calling-schema",
+    "plugin"
   ],
   "author": "Samchon",
   "license": "MIT",
@@ -34,17 +34,10 @@
     "@samchon/openapi": "3.0.0-dev.20250224"
   },
   "devDependencies": {
-    "@nestia/core": "^4.4.2",
-    "@nestia/e2e": "^0.7.0",
-    "@nestia/fetcher": "^4.4.2",
-    "@nestia/sdk": "^4.4.2",
-    "@nestjs/common": "^10.4.12",
-    "@nestjs/core": "^10.4.12",
-    "@nestjs/platform-express": "^10.4.12",
+    "@nestia/e2e": "^0.8.2",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "@types/multer": "^1.4.12",
     "chalk": "4.1.2",
     "multer": "^1.4.5-lts.1",
     "prettier": "^3.3.3",
