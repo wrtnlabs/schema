@@ -1,6 +1,6 @@
 {
-  "name": "@wrtnio/schema",
-  "version": "3.2.1",
+  "name": "@wrtnlabs/schema",
+  "version": "4.0.0",
   "description": "JSON and LLM function calling schemas extended for Wrtn Studio Pro",
   "main": "lib/index.js",
   "module": "./lib/index.mjs",
@@ -24,14 +24,14 @@
     "openai",
     "wrtn"
   ],
-  "author": "Jeongho Nam",
+  "author": "Samchon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wrtnio/schema/issues"
   },
   "homepage": "https://github.com/wrtnio/schema#readme",
   "dependencies": {
-    "@samchon/openapi": "^2.3.3"
+    "@samchon/openapi": "3.0.0-dev.20250224"
   },
   "devDependencies": {
     "@nestia/core": "^4.4.2",
@@ -54,7 +54,7 @@
     "ts-patch": "^3.2.1",
     "typescript": "~5.7.2",
     "typescript-transform-paths": "^3.5.2",
-    "typia": "^7.4.1"
+    "typia": "^7.6.4"
   },
   "files": [
     "lib",

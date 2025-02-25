@@ -1,9 +1,5 @@
 import { DynamicExecutor } from "@nestia/e2e";
-import { NestFactory } from "@nestjs/core";
 import chalk from "chalk";
-
-import { AppFilter } from "./controllers/AppFilter";
-import { AppModule } from "./controllers/AppModule";
 
 const EXTENSION = __filename.substr(-2);
 if (EXTENSION === "js") require("source-map-support").install();
@@ -18,12 +14,6 @@ const getArguments = (type: string): string[] => {
 };
 
 const main = async (): Promise<void> => {
-  // PREPARE SERVER
-  const app = await NestFactory.create(AppModule, { logger: false });
-  app.useGlobalFilters(new AppFilter(app.getHttpAdapter()));
-  await app.listen(3_000);
-
-  // DO TEST
   const include: string[] = getArguments("include");
   const exclude: string[] = getArguments("exclude");
   const report: DynamicExecutor.IReport = await DynamicExecutor.validate({
@@ -61,7 +51,6 @@ const main = async (): Promise<void> => {
     console.log("Failed");
     console.log("Elapsed time", report.time.toLocaleString(), `ms`);
   }
-  await app.close();
   if (exceptions.length) process.exit(-1);
 };
 main().catch(console.error);
